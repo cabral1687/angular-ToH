@@ -1,0 +1,24 @@
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{ hero.id }}">
+      <img
+        [src]="
+          https:  //via.placeholder.com/240x170/eee/808080?text={{
+          hero.name
+        }}
+        "
+      />
+      <span class="badge">{{ hero.id }}</span> {{ hero.name }}
+    </a>
+  </li>
+</ul>
+
+<div
+  id="overlay"
+  style="background-color: rgba(0,0,0,0.8); z-index:9; position: absolute; top:0;bottom: 0;
+left:0; right: 0;
+display:none"
+>
+  <div></div>
+</div>
